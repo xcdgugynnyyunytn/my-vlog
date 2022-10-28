@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<style>
+span{color:red;}
+h3{color:green;}
+</style>
+<h3>Click <span>inside the canvas</span>, and the press any key you will see its ASCII value, and if you press any arrow key you will see its ASCII value as well as which arrow key you have pressed
+</h3>
+<canvas id="myCanvas" width="600" height="400" style="border:1px solid;">
+</canvas>
+<h4>ASCII value of the key you just pressed - <span id="key_value"></span></h4>
+<h4 id="key_arrow"></h4>
+<script>
+canvas = document.getElementById('myCanvas');
+ctx = canvas.getContext("2d");
+window.addEventListener("keydown", function (e)
+{
+keyPressed = e.keyCode;
+document.getElementById("key_value").innerHTML = keyPressed;
+document.getElementById("key_arrow").innerHTML = "";
+	if(keyPressed == '38')
+	{
+document.getElementById("key_arrow").innerHTML = "You have pressed <span>Up</span> arrow key";
+	}
+	if(keyPressed == '40')
+	{
+document.getElementById("key_arrow").innerHTML = "You have pressed <span>Down</span> arrow key";
+	}
+	if(keyPressed == '37')
+	{
+document.getElementById("key_arrow").innerHTML = "You have pressed <span>Left</span> arrow key";
+	}
+	if(keyPressed == '39')
+	{
+document.getElementById("key_arrow").innerHTML = "You have pressed <span>Right</span> arrow key";
+	}
+
+});
+
+</script>
+</body>
+</html>
