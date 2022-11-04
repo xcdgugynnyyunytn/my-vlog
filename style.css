@@ -31,3 +31,10 @@ font-size: 20px;
 border-radius: 8px;
 letter-spacing: 10px;
 }
+label{
+  font-size: 15px;
+color:black;
+padding: 6px;
+border-radius:10px ;
+background-color: #c0d3ff;
+}

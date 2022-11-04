@@ -31,3 +31,39 @@ function speak(){
     var utterThis=new SpeechSynthesisUtterance (speak_data_1+speak_data_2);
     synth.speak(utterThis);
 }
+function check(){
+    img=document.getElementById('captured_image');
+    classifier.classify(img,gotResult);
+}
+function gotResult(error,results){
+    if(error){
+        console.error(error);
+    }
+    else{
+        console.log(results);
+        document.getElementById("result_emotion_name").innerHTML=results[0].label;
+        document.getElementById("result_emotion_name2").innerHTML=results[1].label;
+        predction_1=results[0].label;
+        predction_2=results[1].label;
+        speak();
+        if(results[0].label=="THUMBS UP"){
+        document.getElementById("update_emoji").innerHTML="&#128522;";
+        }
+        if(results[0].label=="VICTORY"){
+            document.getElementById("update_emoji").innerHTML="&#532;";
+            }
+            if(results[0].label=="NICE"){
+                document.getElementById("update_emoji").innerHTML="&#128548;";
+                }
+
+                if(results[1].label=="THUMBS UP"){
+                    document.getElementById("update_emoji2").innerHTML="&#128522;";
+                    }
+                    if(results[1].label=="VICTORY"){
+                        document.getElementById("update_emoji2").innerHTML="&#532;";
+                        }
+                        if(results[1].label=="NICE"){
+                            document.getElementById("update_emoji2").innerHTML="&#128548;";
+                            }
+                }
+    }
