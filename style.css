@@ -1,44 +1,46 @@
-  .heading
-  {
-    font-size: 24px;
-    width: 100%;
-    margin: 0px;
-    box-shadow:5px 5px 5px grey;
-  }
-  .heading_div
-  {
-    float:none;
-    background: white ; 
-    padding : 10px ;
-    border-radius: 20px; 
-    color: black;
-    box-shadow:5px 5px 5px grey;
-  }
-  .heading_div2
-  {
-    font-size: 18px ;
-  }
-  .result_para_tag
-  {
-    box-shadow:5px 5px 5px rgb(128, 127, 127);
-    font-size: 20px;
-  }
- .result_para_tag span{
-  white-space: pre-line;
- }
-
-.copy_right_footer{
-  position:fixed;
-  color:whitesmoke;
-  bottom:0;
-  width:100p;
-  background-color:grey;
-  line-height:3;
-  text-align:center;
+.heading{
+    font-size:25px;
+    width:100%;
+    margin:0px;
+    background-color: #5569C5;
 }
-canvas{
-  border:5px  solid white;
-  border-radius:20px;
-  box-shadow:5px 5px 5px grey;
-  margin-top:160px;
+
+.note{
+    font-size:15px;
+    color: white;
+}
+
+    body{
+        background-size:cover;
+    }
+
+.div_speed{
+    float:left;
+    color:white;
+}
+
+.div_speed_img{
+    width:200px;
+    border-radius:100px;
+}
+
+#speed{
+    font-size:25px;
+    margin:15px;
+}
+
+
+.div_volume{
+    float:right;
+    color:white;
+}
+
+.div_volume_img{
+    width:200px;
+    border-radius:100px;
+}
+
+#volume{
+    font-size:25px;
+    margin:15px;
 }
